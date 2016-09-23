@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SET_SeniorYear
 {
-    class Program
+    class LevelEditor
     {
         static void Main(string[] args)
         {
