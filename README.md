@@ -1,4 +1,4 @@
-# SET_2016_2017
+# Dei-In-Terra
 
 Hello, and welcome to the repository for our 2016-2017 Business Professionals of America Sofware Engineering Team game. 
 
