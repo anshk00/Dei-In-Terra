@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SET_SeniorYear")]
+[assembly: AssemblyTitle("DeiInTerra")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Clear Creek ISD")]
-[assembly: AssemblyProduct("SET_SeniorYear")]
+[assembly: AssemblyProduct("DeiInTerra")]
 [assembly: AssemblyCopyright("Copyright © Clear Creek ISD 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("d68075e5-9f2b-41c4-80e2-b9de3e61c88c")]
+[assembly: Guid("1e723931-39b0-4b17-b47d-1b28e8fcc740")]
 
 // Version information for an assembly consists of the following four values:
 //

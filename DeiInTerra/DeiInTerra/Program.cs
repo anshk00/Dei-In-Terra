@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SET_SeniorYear
+namespace DeiInTerra
 {
-    class LevelEditor
+    class Program
     {
         static void Main(string[] args)
         {
-
         }
     }
 }
