@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework.Input;
 namespace DeiInTerra
 {
     /// <summary>
-    /// This is the main type for your game.
+    /// Main class for Dei In Terra
     /// </summary>
     public class DeiInTerra : Game
     {
