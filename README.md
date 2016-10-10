@@ -7,5 +7,3 @@ Team Members:
 Team Lead/Lead Programmer: Anshuman Kumar
 
 Lead Artist: Alan Chau
-
-Secondary Programmer/Documentation: Andy Hudson
