@@ -13,7 +13,7 @@ namespace DeiInTerra
         private SpriteBatch spriteBatch;
         private Texture2D shop, player1, player2;
         private SpriteFont font;
-        private int health = 0, mana = 0, score = 0;
+        private int health = 100, mana = 100, score = 0;
         private string levelnumber = ""; 
 
         public DeiInTerra()
@@ -83,8 +83,10 @@ namespace DeiInTerra
 
             // TODO: Add your drawing code here
             spriteBatch.Begin();
-            spriteBatch.Draw(shop, );
-
+            spriteBatch.Draw(shop, new Rectangle(0,0,800,480), Color.White);
+            spriteBatch.DrawString(font, "HP: " + health, new Vector2(700, 25), Color.Red);
+            spriteBatch.DrawString(font, "MP: " + mana, new Vector2(700, 50), Color.Purple);
+            spriteBatch.End();
             base.Draw(gameTime);
         }
     }

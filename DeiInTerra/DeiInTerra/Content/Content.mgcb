@@ -24,11 +24,6 @@
 /processorParam:TextureFormat=Color
 /build:Graphics/Grass reverse.png
 
-#begin Graphics/Grass trap.pdn
-/importer:
-/processor:
-/build:Graphics/Grass trap.pdn
-
 #begin Graphics/Grass.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -133,4 +128,15 @@
 /processor:FontDescriptionProcessor
 /processorParam:TextureFormat=Compressed
 /build:GameFont.spritefont
+
+#begin Graphics/Shop.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Graphics/Shop.png
 
