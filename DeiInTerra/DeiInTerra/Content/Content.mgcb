@@ -128,3 +128,9 @@
 /processorParam:TextureFormat=Color
 /build:Graphics/slime.png
 
+#begin GameFont.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:TextureFormat=Compressed
+/build:GameFont.spritefont
+

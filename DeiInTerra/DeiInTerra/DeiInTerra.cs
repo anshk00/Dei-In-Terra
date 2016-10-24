@@ -9,11 +9,15 @@ namespace DeiInTerra
     /// </summary>
     public class DeiInTerra : Game
     {
-        GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
+        private GraphicsDeviceManager graphics;
+        private SpriteBatch spriteBatch;
+        private Texture2D shop, player1, player2;
+        private SpriteFont font;
+        private int health = 0, mana = 0, score = 0;
+        private string levelnumber = ""; 
 
         public DeiInTerra()
-        {
+        { 
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
         }
@@ -39,7 +43,8 @@ namespace DeiInTerra
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            shop = Content.Load<Texture2D>("Graphics/shop");
+            font = Content.Load<SpriteFont>("GameFont");
             // TODO: use this.Content to load your game content here
         }
 
@@ -50,6 +55,7 @@ namespace DeiInTerra
         protected override void UnloadContent()
         {
             // TODO: Unload any non ContentManager content here
+            Content.Unload();
         }
 
         /// <summary>
@@ -76,6 +82,8 @@ namespace DeiInTerra
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
+            spriteBatch.Begin();
+            spriteBatch.Draw(shop, );
 
             base.Draw(gameTime);
         }
