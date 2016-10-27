@@ -3,6 +3,7 @@
 namespace DeiInTerra
 {
 #if WINDOWS || LINUX
+
     /// <summary>
     /// The main class.
     /// </summary>
@@ -12,11 +13,12 @@ namespace DeiInTerra
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        private static void Main()
         {
             using (var game = new DeiInTerra())
                 game.Run();
         }
     }
+
 #endif
 }

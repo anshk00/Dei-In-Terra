@@ -13,13 +13,18 @@ namespace DeiInTerra
         private SpriteBatch spriteBatch;
         private Texture2D shop, player1, player2;
         private SpriteFont font;
-        private int health = 100, mana = 100, score = 0;
-        private string levelnumber = ""; 
+        private int health = 100, mana = 100, score = 0, gold = 8000;
+        private int totalHealth = 100, totalMana = 100;
+        private string levelnumber = "1-Shop";
+        private float ScreenWidth = 800, ScreenHeight = 600;
 
         public DeiInTerra()
-        { 
+        {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            graphics.PreferredBackBufferHeight = (int)ScreenHeight;
+            graphics.PreferredBackBufferWidth = (int)ScreenWidth;
+            graphics.IsFullScreen = false;
         }
 
         /// <summary>
@@ -81,11 +86,13 @@ namespace DeiInTerra
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
+            string displayedHealth = "HP: " + health + "/" + totalHealth, displayedMana = "MP: " + mana + "/" + totalMana;
             spriteBatch.Begin();
-            spriteBatch.Draw(shop, new Rectangle(0,0,800,480), Color.White);
-            spriteBatch.DrawString(font, "HP: " + health, new Vector2(700, 25), Color.Red);
-            spriteBatch.DrawString(font, "MP: " + mana, new Vector2(700, 50), Color.Purple);
+            spriteBatch.Draw(shop, new Rectangle(0, 0, 800, 600), Color.White);
+            spriteBatch.DrawString(font, displayedHealth, new Vector2(ScreenWidth * (0.875f), ScreenHeight * (10 / 600f)), Color.Red);
+            spriteBatch.DrawString(font, displayedMana, new Vector2(ScreenWidth * (0.875f), ScreenHeight * (35 / 600f)), Color.Purple);
+            spriteBatch.DrawString(font, "Level " + levelnumber, new Vector2(ScreenWidth * (.0125f), ScreenHeight * (10 / 600f)), Color.Black);
+            spriteBatch.DrawString(font, "Gold: " + gold, new Vector2(ScreenWidth * (0.875f), ScreenHeight * (60 / 600f)), Color.Gold);
             spriteBatch.End();
             base.Draw(gameTime);
         }
