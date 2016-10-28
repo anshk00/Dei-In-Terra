@@ -50,6 +50,7 @@ namespace DeiInTerra
             spriteBatch = new SpriteBatch(GraphicsDevice);
             shop = Content.Load<Texture2D>("Graphics/shop");
             font = Content.Load<SpriteFont>("GameFont");
+            player1 = Content.Load<Texture2D>("Graphics/knight class");
             // TODO: use this.Content to load your game content here
         }
 
@@ -93,6 +94,7 @@ namespace DeiInTerra
             spriteBatch.DrawString(font, displayedMana, new Vector2(ScreenWidth * (0.875f), ScreenHeight * (35 / 600f)), Color.Purple);
             spriteBatch.DrawString(font, "Level " + levelnumber, new Vector2(ScreenWidth * (.0125f), ScreenHeight * (10 / 600f)), Color.Black);
             spriteBatch.DrawString(font, "Gold: " + gold, new Vector2(ScreenWidth * (0.875f), ScreenHeight * (60 / 600f)), Color.Gold);
+            spriteBatch.Draw(player1, new Vector2(ScreenWidth * (302/800f), ScreenHeight * (431/600f)));
             spriteBatch.End();
             base.Draw(gameTime);
         }
