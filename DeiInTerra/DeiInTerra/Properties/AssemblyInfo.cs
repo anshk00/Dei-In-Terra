@@ -8,8 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyProduct("DeiInTerra")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyDescription("")]
-[assembly: AssemblyCompany("Clear Creek ISD")]
-[assembly: AssemblyCopyright("Copyright © Clear Creek ISD 2016")]
+[assembly: AssemblyCopyright("Copyright © Anshuman Kumar 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
