@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using MonoGame.Extended;
 
 namespace DeiInTerra
 {
@@ -26,6 +27,11 @@ namespace DeiInTerra
             graphics.PreferredBackBufferHeight = (int)ScreenHeight;
             graphics.PreferredBackBufferWidth = (int)ScreenWidth;
             graphics.IsFullScreen = false;
+        }
+
+        public DeiInTerra()
+        {
+            throw new System.NotImplementedException();
         }
 
         /// <summary>

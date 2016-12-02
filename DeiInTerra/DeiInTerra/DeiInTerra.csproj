@@ -58,14 +58,26 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Armor.cs" />
     <Compile Include="Character.cs" />
+    <Compile Include="DatabaseHandler.cs" />
     <Compile Include="DeiInTerra.cs" />
     <Compile Include="Enemy.cs" />
+    <Compile Include="Friendly.cs" />
+    <Compile Include="Item.cs" />
     <Compile Include="Player.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="DeiInTerraRunner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ranged.cs" />
+    <Compile Include="Shop.cs" />
+    <Compile Include="Melee.cs" />
+    <Compile Include="Spell.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="MonoGame.Extended, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MonoGame.Extended.0.5.149\lib\MonoGame.Extended.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="MonoGame.Framework">
       <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
     </Reference>
@@ -81,6 +93,7 @@
     <MonoGameContentReference Include="Content\Content.mgcb" />
     <None Include="app.manifest" />
     <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">

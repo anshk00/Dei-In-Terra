@@ -7,7 +7,7 @@ namespace DeiInTerra
     /// <summary>
     /// The main class.
     /// </summary>
-    public static class Program
+    public static class DeiInTerraRunner
     {
         /// <summary>
         /// The main entry point for the application.
@@ -17,6 +17,11 @@ namespace DeiInTerra
         {
             using (var game = new DeiInTerra())
                 game.Run();
+        }
+
+        public static void Method()
+        {
+            throw new System.NotImplementedException();
         }
     }
 
