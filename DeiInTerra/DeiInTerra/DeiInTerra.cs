@@ -29,10 +29,6 @@ namespace DeiInTerra
             graphics.IsFullScreen = false;
         }
 
-        public DeiInTerra()
-        {
-            throw new System.NotImplementedException();
-        }
 
         /// <summary>
         /// Allows the game to perform any initialization it needs to before starting to run.

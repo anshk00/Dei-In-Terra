@@ -56,7 +56,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="DeiInTerra.Item">
-    <Position X="4" Y="0.5" Width="1.5" />
+    <Position X="4" Y="0.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAACAAAIBAAAiAAAAAAAAAAAAQIUAAACAABAAAAAAAA=</HashCode>
       <FileName>Item.cs</FileName>
