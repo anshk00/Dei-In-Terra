@@ -9,13 +9,13 @@ namespace DeiInTerra
     {
         
 
-        public Player(string a, Texture2D b)
+        public Player(Texture2D a)
         {
             health = 100;
             totalHealth = 100;
             mana = 100;
             totalMana = 100;
-            model = b;
+            model = a;
         }
 
         public int skillPoints
