@@ -8,17 +8,20 @@ namespace DeiInTerra
     /// <summary>
     /// Main class for Dei In Terra
     /// </summary>
+    public enum playerDirection {Left =1, Right =2, Up=3, Down=4};
     public class DeiInTerra : Game
     {
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
         private Texture2D shop;
-        private Player player1, player2;
+        private Player player1;
         private SpriteFont font;
         private int health = 100, mana = 100, score = 0, gold = 8000;
         private int totalHealth = 100, totalMana = 100;
         private string levelnumber = "1-Shop";
         private float ScreenWidth = 800, ScreenHeight = 600;
+        private KeyboardState oldState;
+        public playerDirection pDir = playerDirection.Right;
 
         public DeiInTerra()
         {
@@ -29,10 +32,6 @@ namespace DeiInTerra
             graphics.IsFullScreen = false;
         }
 
-        public DeiInTerra()
-        {
-            throw new System.NotImplementedException();
-        }
 
         /// <summary>
         /// Allows the game to perform any initialization it needs to before starting to run.
@@ -78,10 +77,31 @@ namespace DeiInTerra
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
+            KeyboardState currentState = Keyboard.GetState();
+            switch(pDir)
+            {
+                case playerDirection.Left:
+                    {
+                        break;
+                    }
+                case playerDirection.Right:
+                    {
+                        if(currentState.IsKeyDown(Keys.D))
+                        {
 
-            // TODO: Add your update logic here
+                        }
+                        break;
+                    }
+                case playerDirection.Up:
+                    {
+                        break;
+                    }
+                case playerDirection.Down:
+                    {
+                        break;
+                    }
+
+            }
 
             base.Update(gameTime);
         }

@@ -9,7 +9,7 @@ namespace DeiInTerra
     {
         
 
-        public Player(string a, Texture2D b)
+        public Player(Texture2D b)
         {
             health = 100;
             totalHealth = 100;
@@ -30,14 +30,19 @@ namespace DeiInTerra
             }
         }
 
-        public override void move()
-        {
-            base.move();
-        }
 
+        public void moveLeft()
+        {
+
+        }
+        public void moveRight()
+        {
+
+        }
         public void adjustStats()
         {
-            throw new System.NotImplementedException();
+            
         }
+
     }
 }
