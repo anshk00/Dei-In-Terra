@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using MonoGame.Extended;
+
 
 namespace DeiInTerra
 {
@@ -56,7 +56,7 @@ namespace DeiInTerra
             spriteBatch = new SpriteBatch(GraphicsDevice);
             shop = Content.Load<Texture2D>("Graphics/shop");
             font = Content.Load<SpriteFont>("GameFont");
-            player1 = new Player(Content.Load<Texture2D>("Graphics/knight class"));
+            player1 = new Player(Content.Load<Texture2D>("Graphics/knight class"), ScreenWidth, ScreenHeight);
             // TODO: use this.Content to load your game content here
         }
 
@@ -82,18 +82,26 @@ namespace DeiInTerra
             {
                 case playerDirection.Left:
                     {
+                        if (currentState.IsKeyDown(Keys.A))
+                        {
+                            player1.moveRight();
+                        }
                         break;
                     }
                 case playerDirection.Right:
                     {
                         if(currentState.IsKeyDown(Keys.D))
                         {
-
+                            player1.moveRight();
                         }
                         break;
                     }
                 case playerDirection.Up:
                     {
+                        if (currentState.IsKeyDown(Keys.W))
+                        {
+                            player1.moveJump();
+                        }
                         break;
                     }
                 case playerDirection.Down:
@@ -114,15 +122,16 @@ namespace DeiInTerra
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            string displayedHealth = "HP: " + health + "/" + totalHealth, displayedMana = "MP: " + mana + "/" + totalMana;
-            spriteBatch.Begin();
-            spriteBatch.Draw(shop, new Rectangle(0, 0, 800, 600), Color.White);
-            spriteBatch.DrawString(font, displayedHealth, new Vector2(ScreenWidth * (0.875f), ScreenHeight * (10 / 600f)), Color.Red);
-            spriteBatch.DrawString(font, displayedMana, new Vector2(ScreenWidth * (0.875f), ScreenHeight * (35 / 600f)), Color.Purple);
-            spriteBatch.DrawString(font, "Level " + levelnumber, new Vector2(ScreenWidth * (.0125f), ScreenHeight * (10 / 600f)), Color.Black);
-            spriteBatch.DrawString(font, "Gold: " + gold, new Vector2(ScreenWidth * (0.875f), ScreenHeight * (60 / 600f)), Color.Gold);
-            spriteBatch.Draw(player1.model, new Vector2(ScreenWidth * (.5f), ScreenHeight * (405 / 600f)));
-            spriteBatch.End();
+            //string displayedHealth = "HP: " + health + "/" + totalHealth, displayedMana = "MP: " + mana + "/" + totalMana;
+            //spriteBatch.Begin();
+            //spriteBatch.Draw(shop, new Rectangle(0, 0, 800, 600), Color.White);
+            //spriteBatch.DrawString(font, displayedHealth, new Vector2(ScreenWidth * (0.875f), ScreenHeight * (10 / 600f)), Color.Red);
+            //spriteBatch.DrawString(font, displayedMana, new Vector2(ScreenWidth * (0.875f), ScreenHeight * (35 / 600f)), Color.Purple);
+            //spriteBatch.DrawString(font, "Level " + levelnumber, new Vector2(ScreenWidth * (.0125f), ScreenHeight * (10 / 600f)), Color.Black);
+            //spriteBatch.DrawString(font, "Gold: " + gold, new Vector2(ScreenWidth * (0.875f), ScreenHeight * (60 / 600f)), Color.Gold);
+            //spriteBatch.Draw(player1.model, new Vector2(ScreenWidth * (.5f), ScreenHeight * (405 / 600f)));
+            //spriteBatch.End();
+
             base.Draw(gameTime);
         }
     }
