@@ -8,28 +8,15 @@ namespace DeiInTerra
     /// <summary>
     /// Main class for Dei In Terra
     /// </summary>
-    public enum playerDirection {Left =1, Right =2, Up=3, Down=4};
+
     public class DeiInTerra : Game
     {
-        private GraphicsDeviceManager graphics;
-        private SpriteBatch spriteBatch;
-        private Texture2D shop;
-        private Player player1;
-        private SpriteFont font;
-        private int health = 100, mana = 100, score = 0, gold = 8000;
-        private int totalHealth = 100, totalMana = 100;
-        private string levelnumber = "1-Shop";
-        private float ScreenWidth = 800, ScreenHeight = 600;
-        private KeyboardState oldState;
-        public playerDirection pDir = playerDirection.Right;
+        GraphicsDeviceManager graphics;
 
         public DeiInTerra()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            graphics.PreferredBackBufferHeight = (int)ScreenHeight;
-            graphics.PreferredBackBufferWidth = (int)ScreenWidth;
-            graphics.IsFullScreen = false;
         }
 
 
@@ -54,9 +41,6 @@ namespace DeiInTerra
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            shop = Content.Load<Texture2D>("Graphics/shop");
-            font = Content.Load<SpriteFont>("GameFont");
-            player1 = new Player(Content.Load<Texture2D>("Graphics/knight class"), ScreenWidth, ScreenHeight);
             // TODO: use this.Content to load your game content here
         }
 
@@ -80,34 +64,6 @@ namespace DeiInTerra
             KeyboardState currentState = Keyboard.GetState();
             switch(pDir)
             {
-                case playerDirection.Left:
-                    {
-                        if (currentState.IsKeyDown(Keys.A))
-                        {
-                            player1.moveRight();
-                        }
-                        break;
-                    }
-                case playerDirection.Right:
-                    {
-                        if(currentState.IsKeyDown(Keys.D))
-                        {
-                            player1.moveRight();
-                        }
-                        break;
-                    }
-                case playerDirection.Up:
-                    {
-                        if (currentState.IsKeyDown(Keys.W))
-                        {
-                            player1.moveJump();
-                        }
-                        break;
-                    }
-                case playerDirection.Down:
-                    {
-                        break;
-                    }
 
             }
 
@@ -121,17 +77,6 @@ namespace DeiInTerra
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
-            //string displayedHealth = "HP: " + health + "/" + totalHealth, displayedMana = "MP: " + mana + "/" + totalMana;
-            //spriteBatch.Begin();
-            //spriteBatch.Draw(shop, new Rectangle(0, 0, 800, 600), Color.White);
-            //spriteBatch.DrawString(font, displayedHealth, new Vector2(ScreenWidth * (0.875f), ScreenHeight * (10 / 600f)), Color.Red);
-            //spriteBatch.DrawString(font, displayedMana, new Vector2(ScreenWidth * (0.875f), ScreenHeight * (35 / 600f)), Color.Purple);
-            //spriteBatch.DrawString(font, "Level " + levelnumber, new Vector2(ScreenWidth * (.0125f), ScreenHeight * (10 / 600f)), Color.Black);
-            //spriteBatch.DrawString(font, "Gold: " + gold, new Vector2(ScreenWidth * (0.875f), ScreenHeight * (60 / 600f)), Color.Gold);
-            //spriteBatch.Draw(player1.model, new Vector2(ScreenWidth * (.5f), ScreenHeight * (405 / 600f)));
-            //spriteBatch.End();
-
             base.Draw(gameTime);
         }
     }

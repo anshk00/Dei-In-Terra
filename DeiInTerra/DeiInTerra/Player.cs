@@ -1,14 +1,12 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using MonoGame.Extended;
+
 
 namespace DeiInTerra
 {
     internal class Player : Character
     {
-        public enum Direction {Left, Right};
-        public Vector2 coords;
 
         public Player(Texture2D a, float ScreenWidth, float ScreenHeight)
         {
@@ -17,7 +15,6 @@ namespace DeiInTerra
             mana = 100;
             totalMana = 100;
             model = a;
-            coords = new Vector2(ScreenWidth * (.5f), ScreenHeight * (405 / 600f));
         }
 
         public int skillPoints
