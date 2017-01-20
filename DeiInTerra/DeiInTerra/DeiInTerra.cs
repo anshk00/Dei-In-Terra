@@ -12,6 +12,7 @@ namespace DeiInTerra
     public class DeiInTerra : Game
     {
         GraphicsDeviceManager graphics;
+        SpriteBatch spriteBatch;
 
         public DeiInTerra()
         {
@@ -28,7 +29,9 @@ namespace DeiInTerra
         /// </summary>
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
+            graphics.PreferredBackBufferWidth = (int)ScreenManager.Instance.Dimensions.X;
+            graphics.PreferredBackBufferHeight = (int)ScreenManager.Instance.Dimensions.Y;
+            graphics.ApplyChanges();
 
             base.Initialize();
         }
@@ -41,6 +44,7 @@ namespace DeiInTerra
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            ScreenManager.Instance.LoadContent(Content);
             // TODO: use this.Content to load your game content here
         }
 
@@ -51,7 +55,7 @@ namespace DeiInTerra
         protected override void UnloadContent()
         {
             // TODO: Unload any non ContentManager content here
-            Content.Unload();
+            ScreenManager.Instance.UnloadContent();
         }
 
         /// <summary>
@@ -61,12 +65,7 @@ namespace DeiInTerra
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            KeyboardState currentState = Keyboard.GetState();
-            switch(pDir)
-            {
-
-            }
-
+            ScreenManager.Instance.Update(gameTime);
             base.Update(gameTime);
         }
 
@@ -77,6 +76,9 @@ namespace DeiInTerra
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+            spriteBatch.Begin();
+            ScreenManager.Instance.Draw(spriteBatch);
+            spriteBatch.End();
             base.Draw(gameTime);
         }
     }
