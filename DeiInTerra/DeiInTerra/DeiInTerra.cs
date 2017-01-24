@@ -75,6 +75,7 @@ namespace DeiInTerra
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
+            
             GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
             ScreenManager.Instance.Draw(spriteBatch);

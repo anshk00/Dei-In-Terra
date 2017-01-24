@@ -14,7 +14,9 @@ namespace DeiInTerra
         private static ScreenManager instance;
         public ContentManager Content { private set; get; }
         public Vector2 Dimensions { private set; get; }
+        //XmlManager<GameScreen> xmlGameScreenManager;
         GameScreen currentScreen;
+
         public static ScreenManager Instance
         {
             get
@@ -32,6 +34,9 @@ namespace DeiInTerra
         {
             Dimensions = new Vector2(800, 600);
             currentScreen = new SplashScreen();
+            //xmlGameScreenManager = new XmlManager<GameScreen>();
+            //xmlGameScreenManager.Type = currentScreen.Type;
+            //currentScreen = xmlGameScreenManager.Load("Content/XML/SplashScreen.xml");
         }
 
         public void LoadContent(ContentManager Content)

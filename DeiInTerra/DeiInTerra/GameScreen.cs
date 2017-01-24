@@ -6,12 +6,19 @@ using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
+using System.Xml.Serialization;
 
 namespace DeiInTerra
 {
-    class GameScreen
+    public class GameScreen
     {
         protected ContentManager content;
+
+        public Type Type;
+        public GameScreen()
+        {
+            Type = this.GetType();
+        }
 
         public virtual void LoadContent()
         {
