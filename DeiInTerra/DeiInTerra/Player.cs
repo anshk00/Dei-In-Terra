@@ -1,13 +1,9 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-
+﻿using Microsoft.Xna.Framework.Graphics;
 
 namespace DeiInTerra
 {
     internal class Player : Character
     {
-
         public Player(Texture2D a, float ScreenWidth, float ScreenHeight)
         {
             health = 100;
@@ -31,24 +27,22 @@ namespace DeiInTerra
 
         public void setDirection()
         {
-
         }
+
         public void moveLeft()
         {
-
         }
+
         public void moveRight()
         {
-
         }
+
         public void moveJump()
         {
-
         }
+
         public void adjustStats()
         {
-            
         }
-
     }
 }

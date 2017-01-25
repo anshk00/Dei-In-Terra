@@ -1,7 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-
 
 namespace DeiInTerra
 {
@@ -11,15 +9,14 @@ namespace DeiInTerra
 
     public class DeiInTerra : Game
     {
-        GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
+        private GraphicsDeviceManager graphics;
+        private SpriteBatch spriteBatch;
 
         public DeiInTerra()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
         }
-
 
         /// <summary>
         /// Allows the game to perform any initialization it needs to before starting to run.
@@ -75,7 +72,6 @@ namespace DeiInTerra
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            
             GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
             ScreenManager.Instance.Draw(spriteBatch);

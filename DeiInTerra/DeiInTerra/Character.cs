@@ -1,6 +1,5 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
+﻿using Microsoft.Xna.Framework.Graphics;
+
 namespace DeiInTerra
 {
     internal abstract class Character
@@ -17,7 +16,7 @@ namespace DeiInTerra
         public virtual void move()
         {
         }
-        
+
         public virtual void attack()
         {
         }

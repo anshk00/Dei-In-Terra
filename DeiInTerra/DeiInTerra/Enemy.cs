@@ -4,7 +4,6 @@
     {
         public Enemy(string name)
         {
-
         }
     }
 }
