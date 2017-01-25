@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DeiInTerra
+﻿namespace DeiInTerra
 {
-    class Melee : Item
+    internal class Melee : Item
     {
     }
 }
