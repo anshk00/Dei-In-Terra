@@ -15,12 +15,14 @@ namespace DeiInTerra
     public class SplashScreen : GameScreen
     {
         Texture2D celestialSoft, cognitiveThought;
-        
+
+
         public override void LoadContent()
         {
             base.LoadContent();
             celestialSoft = content.Load<Texture2D>("SplashScreen/CelestialSoft");
             cognitiveThought = content.Load<Texture2D>("SplashScreen/CognitiveThought");
+
         }
 
         public override void UnloadContent()
@@ -35,8 +37,11 @@ namespace DeiInTerra
 
         public override void Draw(SpriteBatch spriteBatch)
         {
+            spriteBatch.Begin();
             spriteBatch.Draw(celestialSoft, Vector2.Zero, Color.White);
             spriteBatch.Draw(cognitiveThought, Vector2.Zero, Color.White);
+            spriteBatch.End();
+
         }
     }
 }
