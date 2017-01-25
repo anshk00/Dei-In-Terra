@@ -7,7 +7,7 @@ namespace DeiInTerra
     {
         private Texture2D celestialSoft, cognitiveThought;
         private float delay = 5, currentElapsedTime;
-        private bool drawPublisherScreen = false;
+        private bool drawPublisherScreen = false, endSplashScreen = false;
 
         public override void LoadContent()
         {
