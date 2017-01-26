@@ -438,3 +438,14 @@
 /processorParam:TextureFormat=Color
 /build:SplashScreen/CognitiveThought.png
 
+#begin Graphics/Title Menu.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Graphics/Title Menu.png
+
