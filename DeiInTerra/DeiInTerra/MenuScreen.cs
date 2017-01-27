@@ -11,9 +11,13 @@ namespace DeiInTerra
 {
     class MenuScreen : GameScreen
     {
+        private Texture2D menuScreen;
+
         public override void LoadContent()
         {
             base.LoadContent();
+            menuScreen = content.Load<Texture2D>("Graphics/MenuScreen");
+
         }
 
         public override void UnloadContent()

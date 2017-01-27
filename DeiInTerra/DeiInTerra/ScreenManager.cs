@@ -10,7 +10,7 @@ namespace DeiInTerra
         public ContentManager Content { private set; get; }
         public Vector2 Dimensions { private set; get; }
 
-        private GameScreen currentScreen;
+        private GameScreen currentScreen, oldScreen;
 
         public static ScreenManager Instance
         {
@@ -49,6 +49,13 @@ namespace DeiInTerra
         public void Draw(SpriteBatch spriteBatch)
         {
             currentScreen.Draw(spriteBatch);
+        }
+
+        public void setCurrentScreen(GameScreen newScreen)
+        {
+            oldScreen = currentScreen;
+            currentScreen = newScreen;
+            oldScreen.UnloadContent();
         }
     }
 }
