@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Armor.cs" />
     <Compile Include="Character.cs" />
+    <Compile Include="InputManager.cs" />
     <Compile Include="MenuScreen.cs" />
     <Compile Include="DatabaseHandler.cs" />
     <Compile Include="DeiInTerra.cs" />

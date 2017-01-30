@@ -9,8 +9,9 @@ namespace DeiInTerra
         private static ScreenManager instance;
         public ContentManager Content { private set; get; }
         public Vector2 Dimensions { private set; get; }
+        public bool isTransitioning =false;
 
-        private GameScreen currentScreen, oldScreen;
+        private GameScreen currentScreen;
 
         public static ScreenManager Instance
         {
@@ -51,10 +52,13 @@ namespace DeiInTerra
             currentScreen.Draw(spriteBatch);
         }
 
-        public void setMenuScreen()
+        public void changeScreens(GameScreen nextScreen)
         {
-            oldScreen = currentScreen;
-            currentScreen = new MenuScreen();
+            isTransitioning = true;
+            UnloadContent();
+            currentScreen = nextScreen;
+            LoadContent(Content);
+            isTransitioning = false;
         }
     }
 }

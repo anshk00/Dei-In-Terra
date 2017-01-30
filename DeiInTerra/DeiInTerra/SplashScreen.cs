@@ -6,8 +6,10 @@ namespace DeiInTerra
     public class SplashScreen : GameScreen
     {
         private Texture2D celestialSoft, cognitiveThought;
-        private float delay = 5, currentElapsedTime, endDelay = 5;
+        private float delay = 3, currentElapsedTime, endDelay = 3;
         private bool drawPublisherScreen = false, endSplashScreenTimer = false;
+
+        GameScreen nextScreen = new MenuScreen()
 
         public override void LoadContent()
         {
@@ -33,7 +35,7 @@ namespace DeiInTerra
             if (endSplashScreenTimer)
                 endDelay -= currentElapsedTime;
             if (currentElapsedTime >= endDelay)
-                ScreenManager.Instance.setMenuScreen();
+                ScreenManager.Instance.changeScreens(nextScreen);
             base.Update(gameTime);
         }
 

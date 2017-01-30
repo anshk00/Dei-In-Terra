@@ -438,7 +438,7 @@
 /processorParam:TextureFormat=Color
 /build:SplashScreen/CognitiveThought.png
 
-#begin Graphics/Title Menu.png
+#begin MenuScreen/MenuScreen.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyEnabled=True
@@ -447,5 +447,5 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Graphics/Title Menu.png
+/build:MenuScreen/MenuScreen.png
 
