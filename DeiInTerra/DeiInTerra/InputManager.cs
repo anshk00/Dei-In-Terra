@@ -41,8 +41,37 @@ namespace DeiInTerra
                 {
                     return true;    
                 }
-                return false;
             }
+        }
+
+        public bool KeyReleased(params Keys[] keys)
+        {
+            foreach (Keys key in keys)
+            {
+                if (currentKeyState.IsKeyUp(key) && oldKeyState.IsKeyDown(key))
+                {
+                    return true;    
+                }
+                
+            }
+            return false;
+        }
+
+        public bool KeyDown(params Keys[] keys)
+        {
+            foreach (Keys key in keys)
+            {
+                if (currentKeyState.IsKeyDown(key) )
+                {
+                    return true;    
+                }
+            }
+            return false;
+        }
+
+        public bool LeftButtonDown(params Vector2[] Dimensions)
+        {
+            
         }
     }
 }
