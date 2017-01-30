@@ -51,11 +51,10 @@ namespace DeiInTerra
             currentScreen.Draw(spriteBatch);
         }
 
-        public void setCurrentScreen(GameScreen newScreen)
+        public void setMenuScreen()
         {
             oldScreen = currentScreen;
-            currentScreen = newScreen;
-            oldScreen.UnloadContent();
+            currentScreen = new MenuScreen();
         }
     }
 }

@@ -16,7 +16,7 @@ namespace DeiInTerra
         public override void LoadContent()
         {
             base.LoadContent();
-            menuScreen = content.Load<Texture2D>("Graphics/MenuScreen");
+            menuScreen = content.Load<Texture2D>("MenuScreen/MenuScreen");
 
         }
 
@@ -33,6 +33,7 @@ namespace DeiInTerra
         public override void Draw(SpriteBatch spriteBatch)
         {
             base.Draw(spriteBatch);
+            spriteBatch.Draw(menuScreen, Vector2.Zero, Color.White);
         }
 
     }

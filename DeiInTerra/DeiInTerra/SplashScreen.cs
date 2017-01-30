@@ -32,8 +32,8 @@ namespace DeiInTerra
             }
             if (endSplashScreenTimer)
                 endDelay -= currentElapsedTime;
-            if(currentElapsedTime >= endDelay)
-                ScreenManager.Instance.
+            if (currentElapsedTime >= endDelay)
+                ScreenManager.Instance.setMenuScreen();
             base.Update(gameTime);
         }
 
