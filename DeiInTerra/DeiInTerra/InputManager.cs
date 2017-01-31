@@ -10,7 +10,7 @@ namespace DeiInTerra
     class InputManager
     {
         KeyboardState currentKeyState, oldKeyState;
-
+        MouseState currentMouseState, oldMouseState;
         private static InputManager instance;
 
         public static InputManager Instance
@@ -27,9 +27,11 @@ namespace DeiInTerra
         public void Update()
         {
             oldKeyState = currentKeyState;
+            oldMouseState = currentMouseState;
             if (!ScreenManager.Instance.isTransitioning)
             {
                 currentKeyState = Keyboard.GetState();
+                currentMouseState = Mouse.GetState();
             }
         }
         
@@ -69,9 +71,31 @@ namespace DeiInTerra
             return false;
         }
 
-        public bool LeftButtonDown(params Vector2[] Dimensions)
+        public bool LeftButton()
         {
-            
+            if(currentMouseState.LeftButton() == ButtonState.Pressed()
+                && oldMouseState.LeftButton() == ButtonState.Released();
+                )
+                return true
+            else
+                return false;
         }
+
+        public bool RightButtonDown()
+        {   
+            if(currentMouseState.RightButton() == ButtonState.Pressed()
+                && oldMouseState.RightButton() == ButtonState.Released()
+                )
+                return true
+            else
+                return false;
+        }
+        public bool CheckCursorLocation(Rectangle Dimensions)
+        {
+            return Dimensions.Contains(currentMouseState.Position());
+        }
+
+        
+
     }
 }
