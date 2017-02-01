@@ -11,7 +11,7 @@ namespace DeiInTerra
 {
     public class Button
     {
-        Rectangle dimensions {get; private set;}
+        public Rectangle dimensions {get; private set;}
 
         public Button (int int1, int int2, int int3, int int4)
         {

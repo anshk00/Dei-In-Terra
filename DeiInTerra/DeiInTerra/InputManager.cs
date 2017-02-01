@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework;
 namespace DeiInTerra
 {
     class InputManager
@@ -43,7 +44,9 @@ namespace DeiInTerra
                 {
                     return true;    
                 }
+                
             }
+            return false;
         }
 
         public bool KeyReleased(params Keys[] keys)
@@ -73,26 +76,24 @@ namespace DeiInTerra
 
         public bool LeftButton()
         {
-            if(currentMouseState.LeftButton() == ButtonState.Pressed()
-                && oldMouseState.LeftButton() == ButtonState.Released();
-                )
-                return true
+            if (currentMouseState.LeftButton.Equals(ButtonState.Pressed)
+                && oldMouseState.LeftButton.Equals(ButtonState.Released))
+                return true;
             else
                 return false;
         }
 
         public bool RightButtonDown()
-        {   
-            if(currentMouseState.RightButton() == ButtonState.Pressed()
-                && oldMouseState.RightButton() == ButtonState.Released()
-                )
-                return true
+        {
+            if (currentMouseState.RightButton.Equals(ButtonState.Pressed)
+                && oldMouseState.RightButton.Equals(ButtonState.Released))
+                return true;
             else
                 return false;
         }
         public bool CheckCursorLocation(Rectangle Dimensions)
         {
-            return Dimensions.Contains(currentMouseState.Position());
+            return Dimensions.Contains(currentMouseState.Position.ToVector2());
         }
 
         

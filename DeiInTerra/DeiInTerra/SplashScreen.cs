@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-
+using Microsoft.Xna.Framework.Input;
 namespace DeiInTerra
 {
     public class SplashScreen : GameScreen
@@ -9,7 +9,7 @@ namespace DeiInTerra
         private float delay = 3, currentElapsedTime, endDelay = 3;
         private bool drawPublisherScreen = false, endSplashScreenTimer = false;
 
-        GameScreen nextScreen = new MenuScreen()
+        GameScreen nextScreen = new MenuScreen();
 
         public override void LoadContent()
         {
@@ -34,7 +34,7 @@ namespace DeiInTerra
             }
             if (endSplashScreenTimer)
                 endDelay -= currentElapsedTime;
-            if (currentElapsedTime >= endDelay)
+            if (currentElapsedTime >= endDelay || InputManager.Instance.KeyPressed(Keys.Enter))
                 ScreenManager.Instance.changeScreens(nextScreen);
             base.Update(gameTime);
         }

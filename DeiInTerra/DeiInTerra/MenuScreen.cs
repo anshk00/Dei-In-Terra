@@ -12,11 +12,14 @@ namespace DeiInTerra
     class MenuScreen : GameScreen
     {
         private Texture2D menuScreen;
-        private DeiInTerra.Button newGame, loadGame, options, credits, exit;
+        private Button newGame, loadGame, options, credits, exit;
+        private Vector2 size, origin;
         public override void LoadContent()
         {
             base.LoadContent();
             menuScreen = content.Load<Texture2D>("MenuScreen/MenuScreen");
+            size = (259, 40);
+            origin = (283,130);
         }
 
         public override void UnloadContent()
