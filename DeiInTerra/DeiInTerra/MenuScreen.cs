@@ -77,8 +77,10 @@ namespace DeiInTerra
         {
             foreach(var button in buttonList)
             {
-                Vector2 stringLocation;
-                spriteBatch.DrawString(menuFont, button.buttonLabel, 
+                Vector2 stringLength = menuFont.MeasureString(button.buttonLabel);
+                stringLength = Vector2.Divide(stringLength, 2f);
+                Vector2 stringBase = Vector2.Add(stringLength, button.stringOrigin);
+                spriteBatch.DrawString(menuFont, button.buttonLabel, stringBase, Color.White);
             }
         }
 
