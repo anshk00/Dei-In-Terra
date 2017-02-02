@@ -449,3 +449,9 @@
 /processorParam:TextureFormat=Color
 /build:MenuScreen/MenuScreen.png
 
+#begin MenuScreen/MenuFont.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:TextureFormat=Compressed
+/build:MenuScreen/MenuFont.spritefont
+
