@@ -59,7 +59,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Armor.cs" />
+    <Compile Include="Button.cs" />
     <Compile Include="Character.cs" />
+    <Compile Include="InputManager.cs" />
     <Compile Include="MenuScreen.cs" />
     <Compile Include="DatabaseHandler.cs" />
     <Compile Include="DeiInTerra.cs" />
@@ -85,9 +87,6 @@
     <Reference Include="MonoGame.Framework">
       <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
     </Reference>
-    <Reference Include="RealmFactoryCore">
-      <HintPath>..\..\..\..\..\Downloads\RealmFactory-1.0.9-DLLs\RealmFactoryCore.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -102,7 +101,6 @@
     <MonoGameContentReference Include="Content\Content.mgcb" />
     <None Include="app.manifest" />
     <None Include="ClassDiagram1.cd" />
-    <Content Include="Content\LevelSet.realm" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
