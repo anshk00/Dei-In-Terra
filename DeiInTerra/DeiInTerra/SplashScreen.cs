@@ -9,13 +9,14 @@ namespace DeiInTerra
         private float delay = 3, currentElapsedTime, endDelay = 3;
         private bool drawPublisherScreen = false, endSplashScreenTimer = false;
 
-        GameScreen nextScreen = new MenuScreen();
+        GameScreen nextScreen;
 
         public override void LoadContent()
         {
             base.LoadContent();
             celestialSoft = content.Load<Texture2D>("SplashScreen/CelestialSoft");
             cognitiveThought = content.Load<Texture2D>("SplashScreen/CognitiveThought");
+            nextScreen = new MenuScreen();
         }
 
         public override void UnloadContent()

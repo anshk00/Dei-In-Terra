@@ -25,7 +25,7 @@ namespace DeiInTerra
                 return instance;
             }
         }
-        public void Update()
+        public void Update(GameTime gameTime)
         {
             oldKeyState = currentKeyState;
             oldMouseState = currentMouseState;
@@ -74,7 +74,7 @@ namespace DeiInTerra
             return false;
         }
 
-        public bool LeftButton()
+        public bool LeftButtonDown()
         {
             if (currentMouseState.LeftButton.Equals(ButtonState.Pressed)
                 && oldMouseState.LeftButton.Equals(ButtonState.Released))

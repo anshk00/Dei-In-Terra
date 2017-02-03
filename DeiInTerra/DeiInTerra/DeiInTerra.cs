@@ -29,6 +29,7 @@ namespace DeiInTerra
             graphics.PreferredBackBufferWidth = (int)ScreenManager.Instance.Dimensions.X;
             graphics.PreferredBackBufferHeight = (int)ScreenManager.Instance.Dimensions.Y;
             graphics.ApplyChanges();
+            IsMouseVisible = true;
 
             base.Initialize();
         }
@@ -42,6 +43,7 @@ namespace DeiInTerra
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             ScreenManager.Instance.LoadContent(Content);
+            
             // TODO: use this.Content to load your game content here
         }
 
@@ -63,6 +65,7 @@ namespace DeiInTerra
         protected override void Update(GameTime gameTime)
         {
             ScreenManager.Instance.Update(gameTime);
+            InputManager.Instance.Update(gameTime);
             base.Update(gameTime);
         }
 

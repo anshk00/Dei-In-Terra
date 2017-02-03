@@ -25,8 +25,8 @@ namespace DeiInTerra
         public void SetDimensions(Vector2 origin, Vector2 size)
         {
             dimensions = new Rectangle(origin.ToPoint(), size.ToPoint());
-            Vector2 stringOffset = Vector2.Divide(size, 8f);
-            stringOrigin = new Vector2(origin.X + stringOffset.X, origin.Y + stringOffset.Y);
+            Vector2 stringOffset = Vector2.Divide(size, 2f);
+            stringOrigin = Vector2.Add(origin, stringOffset);
         }
     }
 }

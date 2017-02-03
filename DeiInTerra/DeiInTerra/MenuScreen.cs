@@ -79,34 +79,39 @@ namespace DeiInTerra
             {
                 Vector2 stringLength = menuFont.MeasureString(button.buttonLabel);
                 stringLength = Vector2.Divide(stringLength, 2f);
-                Vector2 stringBase = Vector2.Add(stringLength, button.stringOrigin);
+                Vector2 stringBase = Vector2.Subtract(button.stringOrigin, stringLength);
                 spriteBatch.DrawString(menuFont, button.buttonLabel, stringBase, Color.White);
             }
         }
 
         public void CheckMenuClicks()
         {
-            if (InputManager.Instance.CheckCursorLocation(newGame.dimensions))
+            if (InputManager.Instance.CheckCursorLocation(newGame.dimensions) &&
+                InputManager.Instance.LeftButtonDown())
             {
                 Debug.WriteLine("New Game");
             }
 
-            else if (InputManager.Instance.CheckCursorLocation(loadGame.dimensions))
+            else if (InputManager.Instance.CheckCursorLocation(loadGame.dimensions) &&
+                InputManager.Instance.LeftButtonDown())
             {
                 Debug.WriteLine("Load Game");
             }
 
-            else if (InputManager.Instance.CheckCursorLocation(options.dimensions))
+            else if (InputManager.Instance.CheckCursorLocation(options.dimensions) &&
+                InputManager.Instance.LeftButtonDown())
             {
                 Debug.WriteLine("Options");
             }
 
-            else if (InputManager.Instance.CheckCursorLocation(credits.dimensions))
+            else if (InputManager.Instance.CheckCursorLocation(credits.dimensions) &&
+                InputManager.Instance.LeftButtonDown())
             {
                 Debug.WriteLine("Credits");
             }
 
-            else if (InputManager.Instance.CheckCursorLocation(exit.dimensions))
+            else if (InputManager.Instance.CheckCursorLocation(exit.dimensions) &&
+                InputManager.Instance.LeftButtonDown())
             {
                 Debug.WriteLine("Exit");
             }
