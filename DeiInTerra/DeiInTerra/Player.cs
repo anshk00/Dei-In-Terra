@@ -7,23 +7,25 @@ namespace DeiInTerra
 {
     internal class Player : Character
     {
+
+        ContentManager content;
         public Vector2 Velocity;
         public float MoveSpeed;
-
-
-        public Player(Texture2D playerTexture)
+        public Player(string playerClass)
         {
+            content = new ContentManager(ScreenManager.Instance.Content.ServiceProvider, "Content/Player");
             Velocity = Vector2.Zero;
+            MoveSpeed = 100f;
             health = 100;
             totalHealth = 100;
             mana = 100;
             totalMana = 100;
-            model = playerTexture;
+            playerType = playerClass;
         }
 
         public void LoadContent()
         {
-
+            content.Load<Texture2D>(playerType);
         }
 
         public void UnloadContent()
@@ -33,7 +35,7 @@ namespace DeiInTerra
         
         public void Update(GameTime gameTime)
         {
-            
+            UpdateVelocity(gameTime);
                 
 
 

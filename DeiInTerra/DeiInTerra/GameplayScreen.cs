@@ -13,22 +13,25 @@ namespace DeiInTerra
     class GameplayScreen : GameScreen
     {
         Player player;
+        
 
         public override void LoadContent()
         {
             base.LoadContent();
-            player = new Player(content.Load<Texture2D>("Graphics/Archer class"));
+            player = new Player("Archer");
             player.LoadContent();
         }
 
         public override void UnloadContent()
         {
             base.UnloadContent();
+            player.UnloadContent();
         }
 
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
+            player.Update(gameTime);
         }
 
         public override void Draw(SpriteBatch spriteBatch)
