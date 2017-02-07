@@ -2,6 +2,8 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Input;
+using MonoGame.Extended.Sprites;
+
 
 namespace DeiInTerra
 {
@@ -11,6 +13,7 @@ namespace DeiInTerra
         ContentManager content;
         public Vector2 Velocity;
         public float MoveSpeed;
+        Sprite playerSprite;
         public Player(string playerClass)
         {
             content = new ContentManager(ScreenManager.Instance.Content.ServiceProvider, "Content/Player");
@@ -25,20 +28,17 @@ namespace DeiInTerra
 
         public void LoadContent()
         {
-            content.Load<Texture2D>(playerType);
+            playerSprite = new Sprite(content.Load<Texture2D>(playerType));
         }
 
         public void UnloadContent()
         {
-
+            content.Unload();
         }
         
         public void Update(GameTime gameTime)
         {
             UpdateVelocity(gameTime);
-                
-
-
         }
 
         public void UpdateVelocity(GameTime gameTime)
