@@ -39,6 +39,9 @@ namespace DeiInTerra
         public void Update(GameTime gameTime)
         {
             UpdateVelocity(gameTime);
+            playerSprite.Position = Vector2.Add(playerSprite.Position, Velocity);
+
+
         }
 
         public void UpdateVelocity(GameTime gameTime)
@@ -79,7 +82,7 @@ namespace DeiInTerra
 
         public void Draw(SpriteBatch spriteBatch)
         {
-
+            playerSprite.Draw(spriteBatch);
         }
 
         public int SkillPoints

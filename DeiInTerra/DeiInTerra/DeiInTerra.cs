@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using MonoGame.Extended;
 
 namespace DeiInTerra
 {
@@ -11,11 +12,15 @@ namespace DeiInTerra
     {
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
-
+        private FramesPerSecondCounter fpsCounter;
+        private SpriteFont spriteFont;
+        private Vector2 fpsLocation;
         public DeiInTerra()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            fpsCounter = new FramesPerSecondCounter(60);
+            fpsLocation =  new Vector2((float)(9/10f)*(ScreenManager.Instance.Dimensions.X), (float) (1/20f)*ScreenManager.Instance.Dimensions.Y);
         }
 
         /// <summary>
@@ -30,7 +35,6 @@ namespace DeiInTerra
             graphics.PreferredBackBufferHeight = (int)ScreenManager.Instance.Dimensions.Y;
             graphics.ApplyChanges();
             IsMouseVisible = true;
-
             base.Initialize();
         }
 
@@ -43,7 +47,7 @@ namespace DeiInTerra
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             ScreenManager.Instance.LoadContent(Content);
-            
+            spriteFont = Content.Load<SpriteFont>("GameFont");
             // TODO: use this.Content to load your game content here
         }
 
@@ -66,6 +70,8 @@ namespace DeiInTerra
         {
             ScreenManager.Instance.Update(gameTime);
             InputManager.Instance.Update(gameTime);
+            fpsCounter.Update(gameTime);
+            
             base.Update(gameTime);
         }
 
@@ -78,6 +84,8 @@ namespace DeiInTerra
             GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
             ScreenManager.Instance.Draw(spriteBatch);
+            int fpsValue = (int)fpsCounter.CurrentFramesPerSecond;
+            spriteBatch.DrawString(spriteFont, fpsValue.ToString(), fpsLocation, Color.White);
             spriteBatch.End();
             base.Draw(gameTime);
         }
