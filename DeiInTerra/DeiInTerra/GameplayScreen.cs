@@ -10,23 +10,24 @@ using Microsoft.Xna.Framework.Graphics;
 using MonoGame.Extended.Maps;
 using MonoGame.Extended.Maps.Tiled;
 using MonoGame.Extended.Animations;
+using MonoGame.Extended;
 
 namespace DeiInTerra
 {
     class GameplayScreen : GameScreen
     {
         Player player;
-        Texture2D currentLevel;
+        TiledMap currentLevel;
         SpriteSheetAnimation walk;
         SpriteSheetAnimator animator;
+
 
         public override void LoadContent()
         {
             base.LoadContent();
             player = new Player("Archer");
             player.LoadContent();
-            currentLevel = base.content.Load<Texture2D>("LevelSelect/Shop");
-
+            currentLevel = base.content.Load<TiledMap>("LevelSelect/TestLevel");
         }
 
         public override void UnloadContent()
@@ -44,8 +45,8 @@ namespace DeiInTerra
         public override void Draw(SpriteBatch spriteBatch)
         {
             base.Draw(spriteBatch);
-            
-            spriteBatch.Draw(currentLevel, Vector2.Zero, Color.White);
+
+            currentLevel.Draw(spriteBatch, new Rectangle(Vector2.Zero.ToPoint(), ScreenManager.Instance.Dimensions.ToPoint()));
             player.Draw(spriteBatch);
         }
     }

@@ -10,7 +10,7 @@ namespace DeiInTerra
 
     public class DeiInTerra : Game
     {
-        private GraphicsDeviceManager graphics;
+        public GraphicsDeviceManager graphics { get; set; }
         private SpriteBatch spriteBatch;
         private FramesPerSecondCounter fpsCounter;
         private SpriteFont spriteFont;
