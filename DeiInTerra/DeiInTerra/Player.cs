@@ -24,11 +24,13 @@ namespace DeiInTerra
             mana = 100;
             totalMana = 100;
             playerType = playerClass;
+            ;
         }
 
         public void LoadContent()
         {
             playerSprite = new Sprite(content.Load<Texture2D>(playerType));
+            playerSprite.Position = Vector2.Divide(ScreenManager.Instance.Dimensions, 2f);
         }
 
         public void UnloadContent()

@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 14.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
 <FxCopReport Version="14.0">
  <Targets>
-  <Target Name="C:\Users\0001056898\Source\Repos\SET_2016_2017\DeiInTerra\DeiInTerra\DeiInTerra.exe">
+  <Target Name="C:\Users\Anshuman\Documents\GitHubVisualStudio\Dei-In-Terra\DeiInTerra\DeiInTerra\DeiInTerra.exe">
    <Modules>
     <Module Name="deiinterra.exe">
      <Namespaces>
@@ -10,14 +10,14 @@
        <Types>
         <Type Name="GameScreen" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2017-02-09 20:33:07Z" FixCategory="DependsOnFix">
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2017-02-20 21:40:24Z" FixCategory="DependsOnFix">
            <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">Implement IDisposable on 'GameScreen' because it creates members of the following IDisposable types: 'ContentManager'. If 'GameScreen' has previously shipped, adding new members that implement IDisposable to this type is considered a breaking change to existing consumers.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="Player" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
          <Messages>
-          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2017-02-09 20:33:07Z" FixCategory="NonBreaking">
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2017-02-20 21:40:24Z" FixCategory="NonBreaking">
            <Issue Name="NonBreaking" Certainty="95" Level="CriticalError">Implement IDisposable on 'Player' because it creates members of the following IDisposable types: 'ContentManager'.</Issue>
           </Message>
          </Messages>

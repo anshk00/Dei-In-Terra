@@ -18,13 +18,14 @@ namespace DeiInTerra
         private Vector2 size, origin, heightModifier;
         private SpriteFont menuFont;
         private List<Button> buttonList = new List<Button>();
-   
+        private GameScreen nextScreen;
         public override void LoadContent()
         {
             base.LoadContent();
             menuScreen = content.Load<Texture2D>("MenuScreen/MenuScreen");
             menuFont = content.Load<SpriteFont>("MenuScreen/MenuFont");
             CreateButtons();
+
         }
 
         public override void UnloadContent()
@@ -90,6 +91,7 @@ namespace DeiInTerra
                 InputManager.Instance.LeftButtonDown())
             {
                 Debug.WriteLine("New Game");
+                nextScreen = new GameplayScreen();
             }
 
             else if (InputManager.Instance.CheckCursorLocation(loadGame.dimensions) &&
@@ -115,6 +117,8 @@ namespace DeiInTerra
             {
                 Debug.WriteLine("Exit");
             }
+            if(nextScreen!= null)
+                ScreenManager.Instance.changeScreens(nextScreen);
         }
 
     }
