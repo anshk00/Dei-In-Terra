@@ -8,3 +8,5 @@ Team Members:
 Team Lead/Lead Programmer: Anshuman Kumar
 
 Lead Artist: Alan Chau
+
+This project makes use of the Monogame framework for C#, the Monogame.Extended library, Microsoft Visual Studio 2015, and Tiled Map Editor. 
