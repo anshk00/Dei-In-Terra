@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+  <SplashScreen>
+    <Image>
+      <Path>Content/SplashScreen/CelestialSoft</Path>
+    </Image>
+    <Image>
+      <Path>Content/SplashScreen/CognitiveThought</Path>
+    </Image>
+    
+  </SplashScreen>
+

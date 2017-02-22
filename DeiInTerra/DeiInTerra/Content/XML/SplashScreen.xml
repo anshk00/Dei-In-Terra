@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:ns="Microsoft.Xna.Framework">
+  <Asset Type="Object">
+  </Asset>
+</XnaContent>
+<SplashScreen>
+	<Path1>Content/SplashScreen/CelestialSoft</Path1>
+	<Path2>Content/SplashScreen/CognitiveThought</Path2>
