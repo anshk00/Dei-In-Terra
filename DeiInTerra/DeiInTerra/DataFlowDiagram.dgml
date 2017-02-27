@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="TopToBottom" Layout="ForceDirected" ZoomLevel="-1" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="7bb66dea-94da-4bf8-b735-912176c0e3ee1" Category="Comment" Bounds="49.4916052900367,503.640009361643,249.39,41.9200000000001" Label="Can be skipped by pressing the &quot;Z&quot; or &quot;Esc&quot; keys" />
+    <Node Id="CanBeSkipped" Category="Comment" Bounds="267.933632636633,153.685850928972,101.643333333333,25.96" Label="Can be skipped" />
+    <Node Id="ContentManager" Bounds="541.728610755744,442.637710738609,172.273333333333,25.96" Label="Monogame Content Pipeline" />
+    <Node Id="Credots" Bounds="200.446255155863,575.560015089755,95.7333333333333,25.96" Label="Credits Screen" />
+    <Node Id="DatabaseFiles" Bounds="709.071664461097,672.344908790786,95.5533333333334,25.96" Label="Database Files" />
+    <Node Id="EditPlayerSettings" Category="Comment" Bounds="328.881705290037,503.640006107321,120.366666666667,25.96" Label="Edit player settings" />
+    <Node Id="EnemyStats" Bounds="769.516360582643,728.30506154938,84.2733333333333,25.96" Label="Enemy Stats" />
+    <Node Id="Exit" Bounds="326.179688489197,615.560006107321,50,25.96" />
+    <Node Id="ExitGame" Category="Comment" Bounds="406.179788489197,615.560006107321,103.03,25.96" Label="Quit to desktop" />
+    <Node Id="ExitToMainMenu" Category="Comment" Bounds="342.603929172174,559.600006107321,129.833333333333,25.96" Label="Quit to Menu Screen" />
+    <Node Id="GameplayScreen" Bounds="447.918596901091,223.84,111.546666666667,25.96" Label="Gameplay Screen" />
+    <Node Id="LoadGame" Bounds="366.6324743315,391.72000610732,80.0933333333334,25.96" Label="Load Game" />
+    <Node Id="LoadMaps,Characters,Levels,Artwork,AndMusic" Category="Comment" Bounds="477.653490953772,313.5933545038,244.506666666667,41.92" Label="Load maps, characters, levels, artwork, and music" />
+    <Node Id="LoadPlayerSettings" Category="Comment" Bounds="267.232773351011,335.76000610732,126.11,25.96" Label="Load player settings" />
+    <Node Id="LoadsNextLevel" Category="Comment" Bounds="440.187302003193,55.96,109.203333333333,25.96" Label="Loads Next Level" />
+    <Node Id="MenuScreen" Bounds="279.719700730803,447.680006107321,89.3533333333335,25.96" Label="Menu Screen" />
+    <Node Id="MissionFailScreen" Bounds="474.405559415171,5.6843418860808E-14,120.383333333333,25.96" Label="Mission Fail Screen" />
+    <Node Id="NewGame" Bounds="284.305111470218,223.84000610732,78.1666666666667,25.96" Label="New Game" />
+    <Node Id="OpeningTheExecutable" Bounds="0,652.79442397804,146.44,25.96" Label="Opening the executable" />
+    <Node Id="Options" Bounds="326.466344100181,671.520006107321,61.9866666666667,25.96" />
+    <Node Id="PauseMenu" Bounds="425.437275055049,447.679940693466,84.9066666666667,25.96" Label="Pause Menu" />
+    <Node Id="PlayerStats" Bounds="652.905885412637,616.384759685181,80.9833333333333,25.96" Label="Player Stats" />
+    <Node Id="RestartsCurrentLevel" Category="Comment" Bounds="489.843878900372,167.88,130.553333333333,25.96" Label="Restarts current level" />
+    <Node Id="SaveChanges" Bounds="514.435509941432,503.639940693466,78.7433333333333,25.96" Label="Save Game" />
+    <Node Id="SelectSavedGame" Bounds="476.725907664834,386.67770493095,118.093333333333,25.96" Label="Select saved game" />
+    <Node Id="SettingsFile" Bounds="346.784442965878,279.80000610732,83.8766666666666,25.96" Label="Settings File" />
+    <Node Id="SplashScreen" Bounds="70.8090317425286,583.436124517012,93.0433333333333,25.96" Label="Splash Screen" />
+    <Node Id="Tutorial" Bounds="399.577065969967,167.88,60.2666666666665,25.96" />
+    <Node Id="UpdatePlayerStats" Category="Comment" Bounds="565.589779217851,560.424774110347,122.136666666667,25.96" Label="Update player stats" />
+    <Node Id="VictoryScreen" Bounds="483.424369286746,111.92,126.266666666667,25.96" Label="Level Results Screen" />
+  </Nodes>
+  <Links>
+    <Link Source="7bb66dea-94da-4bf8-b735-912176c0e3ee1" Target="MenuScreen" Bounds="223.426462242327,477.164980706369,62.1959267077039,26.4750286552741" />
+    <Link Source="CanBeSkipped" Target="Tutorial" Bounds="369.576965969967,173.16731244543,21.0728521359956,2.69578599424497" />
+    <Link Source="ContentManager" Target="LoadMaps,Characters,Levels,Artwork,AndMusic" Bounds="606.772447898586,364.282549414971,18.095244330439,78.3551613236379" />
+    <Link Source="ContentManager" Target="SelectSavedGame" Bounds="564.824964334576,417.311350211549,41.6792844591276,25.3263605270598" />
+    <Link Source="EditPlayerSettings" Target="SettingsFile" Bounds="356.498321533203,314.623748779297,39.4269104003906,189.016265869141" />
+    <Link Source="EnemyStats" Target="DatabaseFiles" Bounds="775.857554080622,704.734906392176,23.0834822145813,23.570155157204" />
+    <Link Source="ExitGame" Target="Exit" Bounds="385.179688489197,628.540006107321,21.0001,0" />
+    <Link Source="ExitToMainMenu" Target="MenuScreen" Bounds="320.268280029297,482.617126464844,52.1709899902344,76.98291015625" />
+    <Link Source="GameplayScreen" Target="MissionFailScreen" Bounds="473.290191650391,34.273551940918,84.4731140136719,189.566444396973" />
+    <Link Source="GameplayScreen" Target="PauseMenu" Bounds="467.379089355469,249.800003051758,29.1486206054688,188.88005065918" />
+    <Link Source="GameplayScreen" Target="VictoryScreen" Bounds="479.709686279297,142.867706298828,39.8152770996094,80.9722900390625" />
+    <Link Source="LoadGame" Target="SelectSavedGame" Bounds="446.725807664834,402.31529332249,21.0069574901693,0.820517385970675" />
+    <Link Source="LoadMaps,Characters,Levels,Artwork,AndMusic" Target="GameplayScreen" Bounds="522.784205758089,256.213589219324,56.4882691855107,57.3797652844765" />
+    <Link Source="LoadPlayerSettings" Target="LoadGame" Bounds="348.006857555087,361.720006107321,33.6928205870135,24.6814567944112" />
+    <Link Source="LoadPlayerSettings" Target="NewGame" Bounds="324.742354687167,258.782954114791,4.74526422722772,76.9770519925296" />
+    <Link Source="LoadsNextLevel" Target="GameplayScreen" Bounds="476.211975097656,81.9199981689453,13.7582092285156,134.107955932617" />
+    <Link Source="MenuScreen" Target="Credots" Bounds="280.216979980469,473.640014648438,42.0786743164063,97.636962890625" />
+    <Link Source="MenuScreen" Target="Exit" Bounds="321.075012207031,473.640014648438,24.8853454589844,133.168884277344" />
+    <Link Source="MenuScreen" Target="LoadGame" Bounds="343.481971424222,422.741273370776,36.6695514590666,24.9387327365442" />
+    <Link Source="MenuScreen" Target="NewGame" Bounds="257.098602294922,257.310516357422,59.4928588867188,190.369476318359" />
+    <Link Source="MenuScreen" Target="Options" Bounds="321.004638671875,473.640014648438,13.0375366210938,192.287414550781" />
+    <Link Source="MissionFailScreen" Target="RestartsCurrentLevel" Bounds="544.481628417969,25.9599990844727,75.3435668945313,136.819145202637" />
+    <Link Source="NewGame" Target="CanBeSkipped" Bounds="320.205618228987,188.626287734853,2.32559682900819,35.2137183724676" />
+    <Link Source="OpeningTheExecutable" Target="SplashScreen" Bounds="81.4750591609168,616.990386970802,22.7707583739903,35.8040370072374" />
+    <Link Source="Options" Target="EditPlayerSettings" Bounds="319.852844238281,534.243530273438,39.1372985839844,137.276489257813" />
+    <Link Source="PauseMenu" Target="EditPlayerSettings" Bounds="414.687432482767,473.639940693466,34.9194964998987,24.7901450529133" />
+    <Link Source="PauseMenu" Target="ExitGame" Bounds="468.617431640625,473.639953613281,4.5137939453125,133.744567871094" />
+    <Link Source="PauseMenu" Target="ExitToMainMenu" Bounds="435.618774414063,473.639953613281,30.875244140625,81.1445922851563" />
+    <Link Source="PauseMenu" Target="SaveChanges" Bounds="487.819076141991,473.639940693466,38.5182250797948,25.0880583353035" />
+    <Link Source="PlayerStats" Target="DatabaseFiles" Bounds="708.115009505923,642.344759685181,27.2659603388396,24.0470996408675" />
+    <Link Source="RestartsCurrentLevel" Target="GameplayScreen" Bounds="521.710876447168,193.84,21.4807301095536,23.3734011533522" />
+    <Link Source="SaveChanges" Target="SelectSavedGame" Bounds="534.345520019531,421.625152587891,16.0880126953125,82.0148010253906" />
+    <Link Source="SaveChanges" Target="UpdatePlayerStats" Bounds="570.45960106093,529.599940693466,32.4477287182123,25.2919038879512" />
+    <Link Source="SelectSavedGame" Target="GameplayScreen" Bounds="469.350494384766,258.244934082031,39.9180297851563,128.432769775391" />
+    <Link Source="SettingsFile" Target="LoadPlayerSettings" Bounds="350.341981620469,305.76000610732,24.8267142951177,23.7751837402373" />
+    <Link Source="SplashScreen" Target="7bb66dea-94da-4bf8-b735-912176c0e3ee1" Bounds="127.606799667482,552.616350898031,24.3996236106405,30.8197736189816" />
+    <Link Source="Tutorial" Target="GameplayScreen" Bounds="446.870518522135,193.84,32.4834202697028,24.5706215512743" />
+    <Link Source="UpdatePlayerStats" Target="PlayerStats" Bounds="642.138422565142,586.384774110347,28.8823310632595,24.2173869168709" />
+    <Link Source="VictoryScreen" Target="LoadsNextLevel" Bounds="512.908541298211,88.5265575012435,21.6413313241226,23.3934424987566" />
+  </Links>
+  <Categories>
+    <Category Id="Comment" Label="Comment" Description="Represents a user defined comment on the diagram" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="Comments" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="GraphDirection" DataType="Microsoft.VisualStudio.Diagrams.Layout.LayoutOrientation" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsProviderRoot" Label="IsProviderRoot" Description="IsProviderRoot" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="Layout" DataType="System.String" />
+    <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+    <Property Id="ZoomLevel" DataType="System.String" />
+  </Properties>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Comment" ValueLabel="Has comment">
+      <Condition Expression="HasCategory('Comment')" />
+      <Setter Property="Background" Value="#FFFFFACD" />
+      <Setter Property="Stroke" Value="#FFE5C365" />
+      <Setter Property="StrokeThickness" Value="1" />
+      <Setter Property="NodeRadius" Value="2" />
+      <Setter Property="MaxWidth" Value="250" />
+    </Style>
+  </Styles>
+</DirectedGraph>

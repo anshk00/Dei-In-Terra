@@ -1,30 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework;
+
 namespace DeiInTerra
 {
-    class InputManager
+    internal class InputManager
     {
-        KeyboardState currentKeyState, oldKeyState;
-        MouseState currentMouseState, oldMouseState;
+        private KeyboardState currentKeyState, oldKeyState;
+        private MouseState currentMouseState, oldMouseState;
         private static InputManager instance;
 
         public static InputManager Instance
         {
             get
             {
-                if(instance == null)
+                if (instance == null)
                 {
                     instance = new InputManager();
                 }
                 return instance;
             }
         }
+
         public void Update(GameTime gameTime)
         {
             oldKeyState = currentKeyState;
@@ -35,16 +31,15 @@ namespace DeiInTerra
                 currentMouseState = Mouse.GetState();
             }
         }
-        
+
         public bool KeyPressed(params Keys[] keys)
         {
             foreach (Keys key in keys)
             {
                 if (currentKeyState.IsKeyDown(key) && oldKeyState.IsKeyUp(key))
                 {
-                    return true;    
+                    return true;
                 }
-                
             }
             return false;
         }
@@ -55,9 +50,8 @@ namespace DeiInTerra
             {
                 if (currentKeyState.IsKeyUp(key) && oldKeyState.IsKeyDown(key))
                 {
-                    return true;    
+                    return true;
                 }
-                
             }
             return false;
         }
@@ -66,9 +60,9 @@ namespace DeiInTerra
         {
             foreach (Keys key in keys)
             {
-                if (currentKeyState.IsKeyDown(key) )
+                if (currentKeyState.IsKeyDown(key))
                 {
-                    return true;    
+                    return true;
                 }
             }
             return false;
@@ -91,12 +85,10 @@ namespace DeiInTerra
             else
                 return false;
         }
+
         public bool CheckCursorLocation(Rectangle Dimensions)
         {
             return Dimensions.Contains(currentMouseState.Position.ToVector2());
         }
-
-        
-
     }
 }
