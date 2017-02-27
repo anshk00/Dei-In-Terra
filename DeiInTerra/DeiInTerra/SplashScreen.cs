@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+
 namespace DeiInTerra
 {
     public class SplashScreen : GameScreen
@@ -9,7 +10,7 @@ namespace DeiInTerra
         private float delay = 3, currentElapsedTime, endDelay = 3;
         private bool drawPublisherScreen = false, endSplashScreenTimer = false;
 
-        GameScreen nextScreen;
+        private GameScreen nextScreen;
 
         public override void LoadContent()
         {

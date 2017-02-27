@@ -1,26 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using MonoGame.Extended.Maps;
-using MonoGame.Extended.Maps.Tiled;
 using MonoGame.Extended.Animations;
-using MonoGame.Extended;
+using MonoGame.Extended.Maps.Tiled;
 
 namespace DeiInTerra
 {
-    class GameplayScreen : GameScreen
+    internal class GameplayScreen : GameScreen
     {
-        Player player;
-        TiledMap currentLevel;
-        SpriteSheetAnimation walk;
-        SpriteSheetAnimator animator;
-
+        private Player player;
+        private TiledMap currentLevel;
 
         public override void LoadContent()
         {

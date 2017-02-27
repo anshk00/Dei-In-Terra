@@ -15,12 +15,13 @@ namespace DeiInTerra
         private FramesPerSecondCounter fpsCounter;
         private SpriteFont spriteFont;
         private Vector2 fpsLocation;
+
         public DeiInTerra()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             fpsCounter = new FramesPerSecondCounter(60);
-            fpsLocation =  new Vector2((float)(9/10f)*(ScreenManager.Instance.Dimensions.X), (float) (1/20f)*ScreenManager.Instance.Dimensions.Y);
+            fpsLocation = new Vector2((float)(9 / 10f) * (ScreenManager.Instance.Dimensions.X), (float)(1 / 20f) * ScreenManager.Instance.Dimensions.Y);
         }
 
         /// <summary>
@@ -71,7 +72,7 @@ namespace DeiInTerra
             ScreenManager.Instance.Update(gameTime);
             InputManager.Instance.Update(gameTime);
             fpsCounter.Update(gameTime);
-            
+
             base.Update(gameTime);
         }
 

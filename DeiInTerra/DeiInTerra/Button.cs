@@ -1,22 +1,18 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework;
 
 namespace DeiInTerra
 {
+    /// <summary>
+    /// Creates a "button" defined by a set of Vector2 parameters. 
+    /// Also assists with using the drawString() method by creating a Vector2 to assist positioning the string.
+    /// </summary>
     public class Button
     {
-        public Rectangle dimensions {get; private set;}
+        public Rectangle dimensions { get; private set; }
         public Vector2 stringOrigin { get; private set; }
         public string buttonLabel { get; private set; }
 
-
-        public Button (Vector2 origin, Vector2 size, string buttonName)
+        public Button(Vector2 origin, Vector2 size, string buttonName)
         {
             SetDimensions(origin, size);
             buttonLabel = buttonName;

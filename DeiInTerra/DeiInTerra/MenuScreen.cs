@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework;
-
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace DeiInTerra
 {
-    class MenuScreen : GameScreen
+    internal class MenuScreen : GameScreen
     {
         private Texture2D menuScreen;
         private Button newGame, loadGame, options, credits, exit;
@@ -19,13 +13,13 @@ namespace DeiInTerra
         private SpriteFont menuFont;
         private List<Button> buttonList = new List<Button>();
         private GameScreen nextScreen;
+
         public override void LoadContent()
         {
             base.LoadContent();
             menuScreen = content.Load<Texture2D>("MenuScreen/MenuScreen");
             menuFont = content.Load<SpriteFont>("MenuScreen/MenuFont");
             CreateButtons();
-
         }
 
         public override void UnloadContent()
@@ -41,7 +35,6 @@ namespace DeiInTerra
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            
             spriteBatch.Draw(menuScreen, Vector2.Zero, Color.White);
             DrawButtons(spriteBatch);
 
@@ -72,11 +65,11 @@ namespace DeiInTerra
 
             exit = new Button(origin, size, "Exit");
             buttonList.Add(exit);
-
         }
+
         public void DrawButtons(SpriteBatch spriteBatch)
         {
-            foreach(var button in buttonList)
+            foreach (var button in buttonList)
             {
                 Vector2 stringLength = menuFont.MeasureString(button.buttonLabel);
                 stringLength = Vector2.Divide(stringLength, 2f);
@@ -93,33 +86,28 @@ namespace DeiInTerra
                 Debug.WriteLine("New Game");
                 nextScreen = new GameplayScreen();
             }
-
             else if (InputManager.Instance.CheckCursorLocation(loadGame.dimensions) &&
                 InputManager.Instance.LeftButtonDown())
             {
                 Debug.WriteLine("Load Game");
             }
-
             else if (InputManager.Instance.CheckCursorLocation(options.dimensions) &&
                 InputManager.Instance.LeftButtonDown())
             {
                 Debug.WriteLine("Options");
             }
-
             else if (InputManager.Instance.CheckCursorLocation(credits.dimensions) &&
                 InputManager.Instance.LeftButtonDown())
             {
                 Debug.WriteLine("Credits");
             }
-
             else if (InputManager.Instance.CheckCursorLocation(exit.dimensions) &&
                 InputManager.Instance.LeftButtonDown())
             {
                 Debug.WriteLine("Exit");
             }
-            if(nextScreen!= null)
+            if (nextScreen != null)
                 ScreenManager.Instance.changeScreens(nextScreen);
         }
-
     }
 }

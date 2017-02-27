@@ -1,19 +1,18 @@
-﻿using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.Input;    
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using MonoGame.Extended.Sprites;
-
 
 namespace DeiInTerra
 {
     internal class Player : Character
     {
-
-        ContentManager content;
+        private ContentManager content;
         public Vector2 Velocity;
         public float MoveSpeed;
-        Sprite playerSprite;
+        private Sprite playerSprite;
+
         public Player(string playerClass)
         {
             content = new ContentManager(ScreenManager.Instance.Content.ServiceProvider, "Content/Player");
@@ -37,18 +36,16 @@ namespace DeiInTerra
         {
             content.Unload();
         }
-        
+
         public void Update(GameTime gameTime)
         {
             UpdateVelocity(gameTime);
             playerSprite.Position = Vector2.Add(playerSprite.Position, Velocity);
-
-
         }
 
         public void UpdateVelocity(GameTime gameTime)
         {
-            if(Velocity.X ==0)
+            if (Velocity.X == 0)
             {
                 if (InputManager.Instance.KeyDown(Keys.S, Keys.Down))
                     Velocity.Y = MoveSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
@@ -62,7 +59,7 @@ namespace DeiInTerra
                 }
             }
 
-            if(Velocity.Y ==0)
+            if (Velocity.Y == 0)
             {
                 if (InputManager.Instance.KeyDown(Keys.Right, Keys.D))
                 {
@@ -77,9 +74,6 @@ namespace DeiInTerra
                     Velocity.X = 0;
                 }
             }
-
-
-
         }
 
         public void Draw(SpriteBatch spriteBatch)

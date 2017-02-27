@@ -1,6 +1,6 @@
 ﻿namespace DeiInTerra
 {
-    public class Shop
+    public class Shop: GameScreen
     {
         public void DisplayCase()
         {
